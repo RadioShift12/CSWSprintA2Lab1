@@ -25,6 +25,7 @@ const setVoice = (e) => {
 }
 
 const toggle = (startOver = true) => {
+    synth.text=document.querySelector('[name="text"]').value; // The text didnt seem to be auto updating
     utterance.text = synth.text;
     synth.cancel();
     if (startOver) {
